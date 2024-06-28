@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Contraseñas Seguras</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de Contraseñas Seguras</h2>
+        
+        <!-- Campo para la longitud de la contraseña -->
+        <label for="length">Longitud de la contraseña:</label>
+        <input type="number" id="length" name="length" min="1" max="128" value="16">
+        <br>
+        
+        <!-- Opciones para incluir diferentes tipos de caracteres -->
+        <div class="form-group">
+            <label for="uppercase">Incluir letras mayúsculas</label>
+            <input type="checkbox" id="uppercase" name="uppercase">
+        </div>
+        
+        <div class="form-group">
+            <label for="lowercase">Incluir letras minúsculas</label>
+            <input type="checkbox" id="lowercase" name="lowercase" checked>
+        </div>
+        
+        <div class="form-group">
+            <label for="numbers">Incluir números</label>
+            <input type="checkbox" id="numbers" name="numbers" checked>
+        </div>
+        
+        <div class="form-group">
+            <label for="special">Incluir caracteres especiales</label>
+            <input type="checkbox" id="special" name="special">
+        </div>
+        
+        <!-- Botón para generar la contraseña -->
+        <button onclick="generatePassword()">Generar Contraseña</button>
+        <br>
+        
+        <!-- Mostrar la contraseña generada -->
+        <h3>Contraseña Generada:</h3>
+        <p id="password"></p>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
